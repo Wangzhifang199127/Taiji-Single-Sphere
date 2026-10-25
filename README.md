@@ -84,5 +84,5 @@ python main.py
   title = {Taiji Single-Sphere Architecture: State Transition without QKV},
   year = {2024},
   publisher = {GitHub},
-  howpublished = {\url{https://github.com/your-username/Taiji-Single-Sphere}}
+  howpublished = {\url{https://github.com/Wangzhifang199127/Taiji-Single-Sphere}}
 }
