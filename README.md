@@ -50,6 +50,12 @@ Tested on a 2-layer, 128-dim model without pre-training:
 | **Output Layer** | Final `nn.Linear` + Softmax | Pure geometric distance matching |
 | **"Unknown" Expression** | Impossible (Forced probability distribution) | **Absolute Silence (0.000000)** |
 
+### What we inherited from Transformer
+We did not rebuild everything from scratch. The foundations remain standard:
+*   **Embeddings:** Token and positional embeddings map discrete text into the physical sphere.
+*   **MLP + GELU:** Acts as the non-linear manifold alignment layer after the physical forces have been applied.
+*   **Residual Connections:** Ensures the "ontological anchor" (the original semantic base) is never lost during violent force interactions.
+*   **Bias = False:** Crucially, we removed all biases in MLPs to guarantee true `F(0) = 0` zero-interference.
 ---
 
 ## Honest Ablation & Limitations (The Physics Boundaries)
