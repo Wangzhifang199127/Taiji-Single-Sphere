@@ -52,4 +52,4 @@ I am an independent researcher. V24 is a tiny proof-of-concept. I am looking for
 1. How to formally prove the convergence of phase rotation?
 2. How to scale V24 to multi-layer architectures?
 
-*Feel free to open an issue on [GitHub](https://github.com/Wangzhifang199127/Taiji-Single-Sphere)*
+*Feel free to open an issue on [GitHub](https://github.com/Wangzhifang199127/Taiji-Single-Sphere/tree/main/phase5_angular_interference)*
