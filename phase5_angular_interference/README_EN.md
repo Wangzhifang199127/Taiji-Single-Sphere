@@ -13,20 +13,19 @@ Standard LLMs rely on statistical black boxes (QKV + Softmax). **V24** replaces 
 *Left: Global Phase Shift. Right: Real/Imaginary Interference.*
 
 ## ⚙️ Core Architecture
-## ⚙️ Core Architecture
 
 ### 1. V20 Force Field (Replacing Attention)
-We compute pure directional inner products \(S_{ij}\) to avoid high-frequency bias, followed by displacement-based force fields.
+We compute pure directional inner products $S_{ij}$ to avoid high-frequency bias, followed by displacement-based force fields.
 
 $$
 S_{ij} = \frac{Z_i}{\|Z_i\|} \cdot \left( \frac{Z_j}{\|Z_j\|} \right)^T
 $$
 
 ### 2. Macro-Phase Generation (Replacing Softmax)
-A lightweight MLP outputs a single scalar phase angle \(\theta_{global}\).
+A lightweight MLP outputs a single scalar phase angle $\theta_{global}$.
 
 ### 3. Complex Interference (Mamba SSM Backbone)
-Features are decoupled by learnable frequencies \(\omega_d\):
+Features are decoupled by learnable frequencies $\omega_d$:
 
 $$
 \theta_d = \theta_{global} \odot \omega_d
@@ -40,6 +39,7 @@ $$
 $$
 h_{rot}^{imag} = h_{t-1}^{real} \sin\theta_d + h_{t-1}^{imag} \cos\theta_d
 $$
+
 ## 🚀 Quick Start
 
     pip install torch datasets transformers matplotlib numpy scikit-learn
