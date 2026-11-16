@@ -13,6 +13,8 @@ Standard LLMs rely on statistical black boxes (QKV + Softmax). **V24** replaces 
 *Left: Global Phase Shift. Right: Real/Imaginary Interference.*
 
 ## ⚙️ Core Architecture
+## ⚙️ Core Architecture
+
 ### 1. V20 Force Field (Replacing Attention)
 We compute pure directional inner products \(S_{ij}\) to avoid high-frequency bias, followed by displacement-based force fields.
 
@@ -38,11 +40,6 @@ $$
 $$
 h_{rot}^{imag} = h_{t-1}^{real} \sin\theta_d + h_{t-1}^{imag} \cos\theta_d
 $$
-## 🧪 Experimental Results (Single-Layer Comparison)
-*   **SST-2 (Language)**: Transformer 67.09% vs V24 67.55% (Perfect match with 100% interpretability).
-*   **Missing Wave Recovery**: Transformer 99.2% vs V24 90.0% (Transformer interpolates statistically; V24 relies on imaginary-part inertia).
-* **Random Copy**: Transformer 15.6% vs V24 11.0% (Both fail, proving V24 rejects random memorization).
-
 ## 🚀 Quick Start
 
     pip install torch datasets transformers matplotlib numpy scikit-learn
